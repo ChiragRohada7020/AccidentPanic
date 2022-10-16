@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Iot Project</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
+        
+      </head>
+<body class="bg-black">
+
+        <div class="bg-white  w-full ">
+          <div class="flex items-center justify-between h-16 ">
+            <div class="px-6">
+              <img src="https://www.iotforall.com/wp-content/uploads/2017/05/IoT-For-All-Logo.png" class="w-28 h-28" />
+            </div>
+            <button type="button" class="px-4 py-2 mr-2 text-white bg-blue-500 rounded">
+              Accident 
+              <span id="accident" class="px-2 py-1 text-sm text-black bg-white rounded-full">0</span>
+            </button>
+            <div class="hidden md:block">
+              
+              <ul class="flex flex-row font-serif gap-10 px-8 text-xl">
+                <a href="admin_index"><li
+                  
+                  class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+                >
+                  Users
+                </li></a>
+                <a href="data">
+                <li
+                 
+                  class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+                >
+                  Data
+                </li>
+              </a>
+                <a href="admin_accident"><li
+                 
+                  class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+                >
+                  Accident
+                </li></a>
+                <a href="admin_logout"><li
+                 
+                  class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+                >
+                  Logout
+                </li></a>
+              </ul>
+            </div>
+            <div class=" md:hidden px-4">
+              <div>
+                <img
+                   onclick="ok()" 
+                   src="https://static.thenounproject.com/png/2041962-200.png"
+                  class="w-10 h-10 hover:cursor-pointer   "
+                  
+                />
+              </div>
+            </div>
+          </div>
+          <div class=" p-5 md:hidden hidden " id="mob_nav">
+            <ul class="flex flex-col gap-5 font-mono text-xl items-center  ">
+              <a href="admin_index"><li
+                
+                class="  hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+              >
+                Users
+              </li></a>
+           <a href="data">
+              <li
+                
+                class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+              >
+                Data
+              </li>
+            </a>
+              <li
+                
+                class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+              >
+                Project
+              </li>
+              <a href="admin_logout"><li
+                
+                class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+              >
+              Logout
+              </li>
+            </a>
+            </ul>
+          </div>
+        </div>
+        <!-- {% for i in  user %}
+        <div id="user" class="my-40  grid justify-items-center ">
+            <div class="bg-green-400 h-20 w-5/6  rounded-lg grid grid-cols-4 ">
+<div class="font-sans  text-2xl grid content-center px-2">
+   <h1 class="">{{i['email']}}</h1>
+</div>
+<div class="font-sans  text-2xl grid content-center">
+    <h1 class="grid justify-items-center">{{i['vehicle_no']}}</h1>
+ </div>
+ <div class="font-sans  text-2xl hover:cursor-pointer grid content-center">
+    <h1 class="grid justify-items-center">{{i['mobile_no']}}</h1>
+ </div>
+ 
+ <a href="/give_no/{{i['vehicle_no']}} " class="hover:cursor-pointer grid content-center bg-red-600"  ><div class="font-sans grid content-center text-3xl ">
+    <h1 class="grid justify-items-center hover:cursor-pointer">Ok</h1>
+ </div></a>
+
+            </div>
+
+        </div>
+        {% endfor %} -->
+<!-- <br><br>
+
+<div class="flex justify-center ">
+  <div class="bg-white h-full w-2/3 rounded-lg flex flex-col">
+    <div class="bg-green-600 h-20 flex justify-center py-4">
+      <h1 class="text-white font-sans text-2xl">User Detail</h1>
+    </div>
+    <div class="flex flex-col px-5   gap-10">
+<div><h1 class="">hii</h1></div>
+<div><h2>hello</h2></div></div>
+  </div>
+</div> -->
+<div class="hidden" id="user_data">
+<div class=" text-white my-10 flex justify-center w-full " >
+  
+  <div class="overflow-hidden bg-white shadow sm:rounded-lg w-3/4">
+    <div class="px-4 py-5 sm:px-6 ">
+      <h3 class="text-lg font-medium leading-6 text-gray-900">Applicant Information</h3>
+      <p class="mt-1 max-w-2xl text-sm text-gray-500">Personal details and application.</p>
+    </div>
+    <div class="border-t border-gray-200">
+      <dl id="full_detail">
+        <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+          <dt class="text-sm font-medium text-gray-500">Full name</dt>
+          <dd  class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">Margot Foster</dd>
+        </div>
+        <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+          <dt class="text-sm font-medium text-gray-500">Mobile Number</dt>
+          <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">Backend Developer</dd>
+        </div>
+        <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+          <dt class="text-sm font-medium text-gray-500">Email address</dt>
+          <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">margotfoster@example.com</dd>
+        </div>
+        
+        <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+          <dt class="text-sm font-medium text-gray-500">Address</dt>
+          <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim incididunt cillum culpa consequat. Excepteur qui ipsum aliquip consequat sint. Sit id mollit nulla mollit nostrud in ea officia proident. Irure nostrud pariatur mollit ad adipisicing reprehenderit deserunt qui eu.</dd>
+        </div>
+        <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+          <dt class="text-sm font-medium text-gray-500">Attachments</dt>
+          <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+            <ul role="list" class="divide-y divide-gray-200 rounded-md border border-gray-200">
+              <li class="flex items-center justify-between py-3 pl-3 pr-4 text-sm">
+                <div class="flex w-0 flex-1 items-center">
+                  <!-- Heroicon name: mini/paper-clip -->
+                  <svg class="h-5 w-5 flex-shrink-0 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                  </svg>
+                  <a  href="#" ><span class="ml-2 w-0 flex-1 truncate">resume_back_end_developer.pdf</span></a>
+                </div>
+                <div class="ml-4 flex-shrink-0">
+                  <a href="#" id="download1" download class="font-medium text-indigo-600 hover:text-indigo-500">Download</a>
+                </div>
+              </li>
+              <li class="flex items-center justify-between py-3 pl-3 pr-4 text-sm">
+                <div class="flex w-0 flex-1 items-center">
+                  <!-- Heroicon name: mini/paper-clip -->
+                  <svg class="h-5 w-5 flex-shrink-0 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="ml-2 w-0 flex-1 truncate">coverletter_back_end_developer.pdf</span>
+                </div>
+                <div class="ml-4 flex-shrink-0">
+                  <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Download</a>
+                </div>
+              </li>
+            </ul>
+          </dd>
+        </div>
+      </dl>
+    </div>
+    <div class="p-4 flex flex-col  justify-center md:flex-row gap-20" ><button onclick="" class="bg-transparent w-32 h-14 hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded">
+      Delete
+    </button>
+    <button onclick="" class="bg-transparent w-32 h-14 hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+      Later
+    </button>
+    <button onclick="okk()" class="bg-transparent w-32 h-14 hover:bg-green-500 text-green-700 font-semibold hover:text-white py-2 px-4 border border-green-500 hover:border-transparent rounded ">
+      Ok
+    </button>
+  </div>
+  </div>
+ 
+</div>
+  
+  
+</div>
+<div class="" id="user_info">
+<div class="flex justify-center ">
+  <div class="dark:bg-gray-800 h-40 w-4/5 mt-20 flex justify-center rounded-xl  border-b-2 border-b-white">
+    <div class="grid items-center">
+    <h1 class="text-green-500 font-sans text-2xl font-semibold">You Are In {{loc}}</h1>
+   
+  </div>
+  </div>
+  </div>
+
+
+
+<div class=" flex flex-col justify-center gap-20  mt-20 sm:grid-cols-2 sm:grid sm:gap-5 md:gap-10">
+  <div class="grid justify-items-center">
+    <div class="p-4 w-full max-w-md bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700 ">
+      <div class="flex justify-between items-center mb-4">
+          <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Latest Customers</h5>
+          <a href="#" class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
+              View all
+          </a>
+     </div>
+     
+     <div class="flow-root">
+          <ul  class="divide-y divide-gray-200 dark:divide-gray-700">
+            {% for i in  user1 %}
+              <li class="py-3 sm:py-4">
+                  <div class="flex items-center space-x-4">
+                      
+                      <div class="flex-1 min-w-0">
+                          <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                            {{i['email']}}
+                          </p>
+                          <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                            {{i['vehicle_no']}}
+                          </p>
+                      </div>
+                      
+                        <!-- <button id="user_data" onclick="okk('{{i['email']}}')" type="button" class="text-white bg-blue-700 hover:bg-green-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-green-500 dark:focus:ring-blue-800">
+                          <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                          <span class="sr-only">Icon description</span>
+                        </button> -->
+                        <button onclick="okk('{{i['vehicle_no']}}')" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                          Detail
+                        </button>
+                      <a href="/give_no/{{i['vehicle_no']}} " >
+                      <button type="button" class="text-white bg-blue-700 hover:bg-green-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-green-500 dark:focus:ring-blue-800">
+                        <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        <span class="sr-only">Icon description</span>
+                      </button></a>
+                  </div>
+              </li>{% endfor %} 
+              
+          </ul>
+     </div>
+    </div></div>
+ <div class="grid justify-items-center">
+<div class="p-4 w-full max-w-md bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700 ">
+  <div class="flex justify-between items-center mb-4">
+      <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Today Meet</h5>
+      <a href="#" onclick="hidden()" class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
+          View all
+      </a>
+ </div>
+ <div class="flow-root">
+      <ul  class="divide-y divide-gray-200 dark:divide-gray-700">
+        {% for i in  user2 %}
+          <li class="py-3 sm:py-4">
+              <div class="flex items-center space-x-4">
+                  
+                  <div class="flex-1 min-w-0">
+                      <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                        {{i['email']}}
+                      </p>
+                      <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                        {{i['vehicle_no']}}
+                      </p>
+                  </div>
+                  <a href="/assign/{{i['vehicle_no']}} " >
+                  <button type="button" class="text-white bg-blue-700 hover:bg-green-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-green-500 dark:focus:ring-blue-800">
+                    <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Icon description</span>
+                  </button></a>
+              </div>
+          </li>
+          {% endfor %}
+      </ul>
+ </div>
+</div></div></div>
+
+
+</div>
+      
+    
+    <script>
+
+var count=0;
+
+fetch('http://127.0.0.1:5000/iot1')
+  .then(response => response.json())  
+  .then(json => {if(json.hello>0)
+  {
+    count=json.hello;
+    document.getElementById("accident").innerText=json.hello
+    // alert(json.hello)
+  }})
+
+
+      window.setInterval(my, 4000)
+      function my() {
+  fetch('http://127.0.0.1:5000/iot1')
+  .then(response => response.json())  
+  .then(json => {if(json.hello>count)
+  {
+    count=json.hello
+    const audio = new Audio('https://opus-bitrates.anthum.com/audio/music-96.opus');
+    
+    
+    document.getElementById("accident").innerText=json.hello
+    alert('accident occur')
+    // alert(json.hello)
+  }})}
+        const ok=(x)=>{
+          
+           
+            if(document.getElementById("mob_nav").className=="hidden")
+            {
+                document.getElementById("mob_nav").className="p-5 md:hidden"
+            }
+            else
+            {
+                document.getElementById("mob_nav").className="hidden"
+            }
+           
+        }
+
+
+const show_data=(x)=>{
+
+
+        let data1='sdlkfkj';
+        fetch('/user_data/'+x)
+        .then(res =>res.json())
+        .then(data => {console.log(data);
+        y=document.getElementById('full_detail').childNodes;
+        console.log(y[1].childNodes[3].innerText=data['first_name']);
+        console.log(y[3].childNodes[3].innerText=data['mobile_no']);
+        console.log(y[5].childNodes[3].innerText=data['email']);
+        var z=data["vehicle_no"]
+        let zz ="{"+"{"+`url_for('static',filename='img/${z}.png')`+"}"+"}"
+        console.log(zz)
+        console.log(document.getElementById('download1').href=`${zz}`) ;
+        
+        })
+        ;
+        
+      }
+
+const okk=(x)=>
+{
+  
+if(document.getElementById("user_info").className=='hidden')
+{
+  console.log("dslkj");
+  document.getElementById("user_data").className='hidden'
+  document.getElementById("user_info").className=''
+}
+else
+{
+  console.log("dsjbk")
+  show_data(x);
+  document.getElementById('user_data').className='flex flex-col'
+  document.getElementById('user_info').className='hidden'
+}
+}
+       
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
+</head>
+<body class=" bg-white">
+    
+        <div class="bg-black w-full fixed top-0" >
+            <div class="flex items-center justify-between h-16 ">
+              <div class="px-6">
+                <img src="https://www.iotforall.com/wp-content/uploads/2017/05/IoT-For-All-Logo.png" class="w-28 h-28" />
+              </div>
+              <div class="hidden md:block">
+                <ul class="flex flex-row font-mono gap-10 px-8 text-xl text-white">
+                  <li
+                    
+                    class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+                  >
+                    Users
+                  </li>
+                  <li
+                   
+                    class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+                  >
+                    Data
+                  </li>
+                  <li
+                   
+                    class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+                  >
+                    Projects
+                  </li>
+                  <a href="admin_logout"><li
+                   
+                    class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+                  >
+                    Logout
+                  </li></a>
+                </ul>
+              </div>
+              <div class=" md:hidden px-4">
+                <div>
+                  <img
+                     onclick="ok()" 
+                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOcAAADbCAMAAAChknbEAAAAclBMVEUAAAD+/v7////f39+Hh4fV1dWgoKB2dnbw8PBaWlrl5eVdXV2QkJB+fn4xMTH5+fnGxsYlJSW7u7tKSkpvb29nZ2fIyMi3t7ednZ3r6+scHBzOzs5PT09ra2upqanS0tINDQ1AQEAVFRU4ODiUlJQiIiKgrmdkAAACrUlEQVR4nO3d63LaMBRFYfk43O2YOyEQkqbJ+79i5QnNtD8ad46YWrte3xOwBjCMJfmEAAAAAAAAAAAA8jCrx9mqto+3idydLHPHt/TK+9KsyFxMrRMzt/lXtsyWQ8iM7JSQeZbJjKEHf2ejkxlDF97MB6XMwqaDeDtj6JMvc6eVWXivuRe1zsbX+SzWWdiLq3Mq1zmjk046c0UnnXTmi0466cwXnf9Zp+8O0Uiuc+XqXIt1mrkyQ63WOfJ1BrXOytmp9cH1fmxDWAktO8TOB29neBPqtKM7M4SlTKgVLwmdYS8Sas23lMwQKoXvqNlzWmX0euh7+0G30r0k+Jv6MCrztay+36QSAAAAAAAAAIBebcajpu8VlD+z+WFyi8rFvO/Vk26Ff4n3p7XGetk0cVlwLlDZMu+hqw+lSGYbmvCOHmQy/aeuoo1QZspBV7EDZuZ8wMCjVqZ7A1Gl1ln6OnU2D105N77p/Khc2b2rcyj7qfU6h7I/nk466cwWnXTSmS866ZTs9P2PV7mn+cl5y+8k1+nKDGOxTu+D0GZqnWtfp9qFyM7OzjupTu/tviB2xU1YYFE66GopD8HdyITaJSEzhmo8e9ISDi1ftcci+874WnyB801qZvySXo597z/osN+lV37YTLK18C02AAAAAAAAAACEnO8ytn29TeRi3/e6Qpej90HGv2jnYma+jlTEF8hczL9Sa2QWCQ8bbykdGEyZiym1sWYwczHdD+LW2JvwyXtE+0krk7mYHcSOLbvnYh7lOn0bGaV+VVqD2R9PJ510ZotOOunMF5100pmvwczFfHd1ao0XZC5mJ7VO5mJ+7V2rk7mYnVTGRbZzMZOWtVVCrUk8Zlblv5zdXoJOaZXRat339oNu5W0ORk4uo4wxFxMAAAAAAAAAAPxTPwD45m+8nBaHXwAAAABJRU5ErkJggg=="
+                    class="w-10 h-10 hover:cursor-pointer   "
+                    
+                  />
+                </div>
+              </div>
+            </div>
+            <div class=" p-5 md:hidden hidden " id="mob_nav">
+              <ul class="flex flex-col gap-5 font-mono text-xl items-center text-white ">
+                <li
+                  
+                  class="  hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+                >
+                  Users
+                </li>
+                <li
+                  
+                  class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+                >
+                  Data
+                </li>
+                <li
+                  
+                  class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+                >
+                  Project
+                </li>
+                <a href="admin_logout"><li
+                  
+                  class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+                >
+                Logout
+                </li>
+              </a>
+              </ul>
+            </div>
+          </div>
+
+          <main class="mt-40 font-serif divide-y-2 px-20 ">
+        <div class="grid grid-cols-1 justify-items-center   p-2 md:p-20" >
+       
+          <div class="grid grid-cols-1 md:grid-cols-2 justify-items-center  pt-10 pb-20">
+            <div class="grid grid-cols-1 justify-items-start" >
+                <div><h1 class="text-3xl font-bold">Automatic car accident detection and notification</h1></div>
+                <div><p class="text-xl" >SO Smart detects car accidents using the internal sensors(Accelerometer and GPS) of your smartphone, and sends an emergency notification with you location to your pre selected emergency contacts. This allowing your contacts to send help as soon as possible.</p></div>
+            </div>    
+                <div class="grid justify-items-start"><img class="w-8/9 h-60" src="http://www.sosmartapp.com/uploads/4/5/9/9/45991051/7675192.png?397";
+                ></div>
+        </div>
+    
+    
+        
+            <div class="grid grid-cols-1 md:grid-cols-2  justify-items-center  pt-20 pb-20 ">
+                <div class="grid justify-items-start"><img  src="http://www.sosmartapp.com/uploads/4/5/9/9/45991051/7656298.png?295" class="w-96 h-96"></div>
+                <div class="grid grid-cols-1   justify-items-start">
+                    <div><h2 class="text-3xl font-bold">Manual or Automatic Mode</h2></div>
+                    <div class="text-xl" > 
+                    
+                    <p>SOSmart car accident service can be configured in manual mode or automatic mode.
+                       <br>
+                        Automatic mode: Whenever SOSmart detects you are in a moving vehicle, it will automatically turn on the crash detection monitoring, allowing you to absolutelly forget about the app. Recommended for people that frequently travels in a vehicle.
+                        <br>
+                        Manual mode: User must manually turn the monitoring system in the app. Recommended for people who rarely travels in a moving vehicle
+                    </p></div></div>
+                </div>
+            </div>
+           
+        
+    
+        <div class="grid grid-cols-1 md:grid-cols-2  justify-items-center pt-20 pb-20">
+          <div class="grid grid-cols-1 justify-items-start " >
+                <div class=""><h2 class="text-3xl font-bold">Effective emergency notification</h2></div>
+                <div class="text-xl">
+                <p >
+                    No matter what your emergency contacts are doing, SOSmart will start a loud alarm which will call their atention . This alarm will only happen if your contacts have SOSmart installed
+                </p></div>
+          </div>
+        <div class="grid justify-items-start">  <img src="http://www.sosmartapp.com/uploads/4/5/9/9/45991051/8281233.png?397" ></div>
+          
+        </div>
+       
+    
+        <div class="grid grid-cols-1 md:grid-cols-2  justify-items-center  pt-20 pb-20">
+            <div class="grid justify-items-start">
+                <img src="http://www.sosmartapp.com/uploads/4/5/9/9/45991051/1745376.png?360" alt="img4;">
+                </div>
+                <div class="grid grid-cols-1 justify-items-start" >
+                    <h2 class="text-3xl font-bold">Panic Button</h2>
+                    
+                    <p class="text-xl">
+                        For any other emergency SOSmart has a panic button which when pressed, sends an emergency notification with your location to emergency contacts. and associated institutions.
+                    </p>
+                </div>
+            
+            
+        </div>
+    
+        <div class="grid grid-cols-1 md:grid-cols-2  justify-items-center  pb-20">
+            <div class="grid grid-cols-1 justify-items-start">
+                <h2 class="text-3xl font-bold">Algorithm based on real car crash data</h2>
+                
+                <p class="text-xl">
+                    Our professional and sofisticated algorithm has been designed using real car crash data from the National Highway Traffic Safety Administration. Using this data our algorithm can differentiate when you drop your phone, brake too hard or had a minor accident avoiding false alarms
+                </p>
+            </div>
+            
+        </div>
+    
+        <div class="grid grid-cols-1 md:grid-cols-2  justify-items-center  ">
+            <div class="grid justify-items-start">
+            <img src="http://www.sosmartapp.com/uploads/4/5/9/9/45991051/7994728.png?455" alt="img5">
+            </div>
+            <div class="grid grid-cols-1 justify-items-start">
+                <h2 class="text-3xl font-bold">Find Nearby Hospitals</h2>
+                
+                <p class="text-2xl">
+                    In emergencies receiving medical atention on time can make the difference. SOSmart no matter where in the world you are, will show you a list of nearby hospitals and show you directions to get there as quick as possible
+                </p>
+            </div>
+        </div>
+        
+        </div>
+    
+        <div class="grid grid-cols-1 justify-items-center pt-40">
+            <h2 class="text-4xl font-bold">Real time monitoring platform for institutions</h2>
+            <br>
+            <br>
+            <p class="text-2xl">SOSmart offers a web platform which allows institutions to monitor emergencies 24 hours a day, 7 days a week  anywhere in the world.</p>
+            <br>
+            <br>
+            <img src="http://www.sosmartapp.com/uploads/4/5/9/9/45991051/5321869.png?688" alt="img6" style="border:1px solid blue;">
+            <br>
+            <br>
+            <p >
+                Offer your clients and employees safety and security using our web platform at  very convenient prices. For further information please contact us.
+            </p>
+        </div>
+    </main>
+    <script>const ok=()=>{
+           
+      if(document.getElementById("mob_nav").className=="hidden")
+      {
+          document.getElementById("mob_nav").className="p-5 md:hidden"
+      }
+      else
+      {
+          document.getElementById("mob_nav").className="hidden"
+      }
+     
+  }</script>
+</body>
+</html>

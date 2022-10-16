@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
+    <title>Document</title>
+</head>
+<body class="bg-black">
+    <div class="bg-white  w-full  fixed top-0">
+        <div class="flex items-center justify-between h-16 ">
+          <div class="px-6">
+            <img src="https://www.iotforall.com/wp-content/uploads/2017/05/IoT-For-All-Logo.png" class="w-28 h-28" />
+          </div>
+          <div class="hidden md:block">
+            <ul class="flex flex-row font-serif gap-10 px-8 text-xl">
+              <a href="admin_index"><li
+                
+                class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+              >
+                Users
+              </li></a>
+              <li
+               
+                class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+              >
+                Data
+              </li>
+              <a href="admin_accident"><li
+               
+                class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+              >
+                Accident
+              </li></a>
+              <a href="admin_logout"><li
+               
+                class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+              >
+                Logout
+              </li></a>
+            </ul>
+          </div>
+          <div class=" md:hidden px-4">
+            <div>
+              <img
+                 onclick="ok()" 
+                 src="https://static.thenounproject.com/png/2041962-200.png"
+                class="w-10 h-10 hover:cursor-pointer   "
+                
+              />
+            </div>
+          </div>
+        </div>
+        <div class="hidden" id="mob_nav">
+          <ul class="flex flex-col gap-5 font-mono text-xl items-center  ">
+            <a href="admin_index"><li
+              
+              class="  hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+            >
+              Users
+            </li></a>
+
+            <li
+              
+              class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+            >
+              Data
+            </li>
+            <li
+              
+              class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+            >
+              Project
+            </li>
+            <a href="admin_logout"><li
+              
+              class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+            >
+            Logout
+            </li>
+          </a>
+          </ul>
+        </div>
+      </div>
+
+<div class="pt-10"></div>
+
+      <div class="container my-10 flex flex-col gap-10 ">
+      <div class="flex  justify-center  ">
+        <div>  
+<h1 class="font-mono text-3xl text-white"> <span class="text-blue-600"> Data </span><span class="text-green-600">Analysis</span></h1>
+
+        </div>
+        
+      </div>
+ 
+      <div class="flex justify-start gap-20 p-4">
+        <div class="flex flex-col justify-center">
+          <h1 class="text-3xl font-sans  text-yellow-200">Number Of Cases :</h1>
+         </div>
+        <!-- <img src="{{url_for('static',filename='bar_chart.svg')}}"> -->
+        <embed src="{{url_for('static',filename='bar_chart.svg')}}" width="800" height="500"
+type="image/svg+xml"
+ /> 
+      </div>
+      </div>
+      <div><embed src="{{url_for('static',filename='pie_chart.svg')}}" width="800" height="500"
+        type="image/svg+xml"
+         /> </div>
+      <script> const ok=()=>{
+           
+        if(document.getElementById("mob_nav").className=="hidden")
+        {
+            document.getElementById("mob_nav").className="block md:hidden"
+        }
+        else
+        {
+            document.getElementById("mob_nav").className="hidden"
+        }
+       
+    }</script>
+</body>
+</html>
