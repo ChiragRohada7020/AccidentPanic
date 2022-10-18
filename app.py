@@ -22,6 +22,7 @@ import pygal
 from werkzeug.utils import secure_filename
 from werkzeug.datastructures import  FileStorage
 from flask_bcrypt import Bcrypt
+from pymongo import mongo_client
 
 
 
@@ -49,7 +50,7 @@ if __name__ == '__main__':
 
 
 
-myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+myclient = pymongo.MongoClient("mongodb+srv://ChiragRohada:s54icYoW4045LhAW@atlascluster.t7vxr4g.mongodb.net/test")
 
 mydb = myclient["IOT"]
 
@@ -88,7 +89,7 @@ def hello_world():
 
 
     if 'user_id' in session:
-        return render_template('index.html',type="Logout",type1="user_logout") 
+        return render_template('index.html',type="Logout",type1="logout") 
     return render_template('index.html',type="Login",type1="login") 
 
 
