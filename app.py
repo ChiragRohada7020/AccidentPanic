@@ -22,6 +22,7 @@ import pygal
 from werkzeug.utils import secure_filename
 from werkzeug.datastructures import  FileStorage
 from flask_bcrypt import Bcrypt
+from pymongo import mongo_client
 
 
 
@@ -88,7 +89,7 @@ def hello_world():
 
 
     if 'user_id' in session:
-        return render_template('index.html',type="Logout",type1="user_logout") 
+        return render_template('index.html',type="Logout",type1="logout") 
     return render_template('index.html',type="Login",type1="login") 
 
 
@@ -128,7 +129,7 @@ def login():
 
 
 
-@app.route("/user_logout")
+@app.route("/logout")
 def user_logout():
     session.pop('user_id')
     
@@ -518,7 +519,7 @@ def user_index():
 
         mycol = mydb["vehicle"]
         data=mycol.find({"email":session['user_id']})
-        return render_template('user_index.html',type="logout",type1="user_logout",data=data)
+        return render_template('user_index.html',type="logout",type1="logout",data=data)
     else:
         return redirect(url_for('login'))
                 

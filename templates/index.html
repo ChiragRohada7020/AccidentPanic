@@ -2,152 +2,366 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accident CHAD</title>
-    <link rel="stylesheet" href="static/dist/css/style.css">
+    <title>Accident Panic</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
+
+    <link rel="stylesheet" href="static/dist/css/style18.css">
+
 </head>
-
 <body>
-    <div>
-        <nav>
-            <ul>
-               <a href="#"><li>Home</li></a> 
-                <a href="user_index"><li>User</li></a>
-                <a href={{type1}}><li>{{type}}</li></a>
-                <a href="sign_up"><li>SignUp</li></a>
-            </ul>
-        </nav>
+    
+<!-- header section starts  -->
+
+<header>
+
+    <a href="#" class="logo">LOGO</a>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#features">features</a>
+        <a href="#about">about</a>
+        <a href="#usage">usage</a>
+        <a href="/user_index">Users</a>
+        <a href="/{{type1}}">{{type1}}</a>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="my-40">
+        <h3 class="font-bold text-4xl text-black" >Accident Panic</h3>
+        
     </div>
-    <div style="padding-top: 90px;"></div>
 
-    <main>
-    <section>
-        <div class="content1">
-            <h1 style="padding:10px 10px"><bigtitle>Automatic Car Accident Detection and Alert System</bigtitle></h1>
-            <p class="padd">Accident Panic Button uses a unique technology using Arduino and IoT to create a device which uses 
-                Accelerometer and GPS to get the location of the vehicle that is a potential victim of an <red>Accident</red>.</p>
-        </div>    
-            <img src="{{url_for('static', filename='iot.png')}}" style="width: 1800px;
-            height: 400px;" alt="img1">
-    </section>
-    <hr style="width:90%; margin-left:60px"></hr>
+    <!-- <div class="swiper-container image-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="{{url_for('static',filename='img/pic1.jpg')}}" alt=""></div>
+            <div class="swiper-slide"><img src="images/shot-02.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/shot-03.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/shot-04.jpg" alt=""></div>
+        </div>
+    </div> -->
+  
+    
 
-    <section1>
-        <div class="content2">
-            <img src="http://www.sosmartapp.com/uploads/4/5/9/9/45991051/7656298.png?295" style="width: 350px; height: 400px;" alt="img2;">
-            <div class="padd1">
-                <h2 style="font-size: 30px;"><bigtitle>Manual or Automatic Mode</bigtitle></h2>
-                <br>
-                <!-- <br> -->
-                <p>SOSmart car accident service can be configured in manual mode or automatic mode.
-                   <br> 
-                   <br>
-                   <br>
-                    Automatic mode: Whenever SOSmart detects you are in a moving vehicle, it will automatically turn on the crash detection monitoring, allowing you to absolutelly forget about the app. Recommended for people that frequently travels in a vehicle.
-                    <br>
-                    <br>
-                    <br>
-                    Manual mode: User must manually turn the monitoring system in the app. Recommended for people who rarely travels in a moving vehicle
-                </p>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- features section starts  -->
+
+<section class="features" id="features">
+
+    <h1 class="heading">Website features</h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-magic"></i>
+            <h3>smooth design</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque enim ad neque. Voluptatem alias beatae accusamus laudantium nisi assumenda libero.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-shield-alt"></i>
+            <h3>accident detection</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque enim ad neque. Voluptatem alias beatae accusamus laudantium nisi assumenda libero.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-globe"></i>
+            <h3>Privacy protect</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque enim ad neque. Voluptatem alias beatae accusamus laudantium nisi assumenda libero.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>location tracking</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque enim ad neque. Voluptatem alias beatae accusamus laudantium nisi assumenda libero.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-cogs"></i>
+            <h3>powerfull settings</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque enim ad neque. Voluptatem alias beatae accusamus laudantium nisi assumenda libero.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-headset"></i>
+            <h3>24 x 7 service</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque enim ad neque. Voluptatem alias beatae accusamus laudantium nisi assumenda libero.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- features section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading">about the website</h1>
+
+<div class="row">
+        
+    <div class="image">
+        <img src="images/about-img.png" alt="">
+    </div>    
+
+    <div class="content">
+        <h3>Take a Look Around our Website</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus labore perspiciatis iusto debitis, explicabo neque earum accusamus adipisci eius, nobis laboriosam, autem modi porro quisquam saepe assumenda fuga quod ipsa!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit rerum excepturi alias quas voluptatibus provident voluptatum sapiente quos enim praesentium?</p>
+    </div>
+
+</div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- usage section starts  -->
+
+<section class="usage" id="usage">
+
+    <h1 class="heading">how it works?</h1>
+
+    <div class="row">
+
+        <div class="box-container">
+            <div class="box">
+                <i class="fas fa-sort-amount-down"></i>
+                <h3>minimum progress</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem dolor nihil dicta eveniet quam nam explicabo, natus labore quia cupiditate.</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-user-clock"></i>
+                <h3>active time</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem dolor nihil dicta eveniet quam nam explicabo, natus labore quia cupiditate.</p>
             </div>
         </div>
-        <hr style="width:90%; margin-left:60px"></hr>
-    </section1>
 
-    <section2>
-        <div class="content3">
-            <h2 style="padding: 0px 10px;"><bigtitle>Effective emergency notification</bigtitle></h2>
-            <br>
-            <p style="padding:10px 10px">
-                No matter what your emergency contacts are doing, SOSmart will start a loud alarm which will call their atention . This alarm will only happen if your contacts have SOSmart installed
-            </p>
-        </div>
-        <img src="http://www.sosmartapp.com/uploads/4/5/9/9/45991051/8281233.png?397" alt="img3;" style="border: 1px solid rgb(131, 128, 128); padding:5px;">
-       
-    </section2>
-    <hr style="width:90%; margin-left:60px"></hr>
+        <img class="divider" src="images/usage-img.png" alt="">
 
-    <section3>
-        <div class="content4">
-            <img src="http://www.sosmartapp.com/uploads/4/5/9/9/45991051/1745376.png?360" alt="img4;">
-            <div class="text">
-                <h2><bigtitle>Panic Button</bigtitle></h2>
-                <br>
-                <p>
-                    For any other emergency SOSmart has a panic button which when pressed, sends an emergency notification with your location to emergency contacts. and associated institutions.
-                </p>
+        <div class="box-container">
+            <div class="box">
+                <i class="fas fa-sort-amount-up"></i>
+                <h3>maximum progress</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem dolor nihil dicta eveniet quam nam explicabo, natus labore quia cupiditate.</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-fire"></i>
+                <h3>calories burned</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem dolor nihil dicta eveniet quam nam explicabo, natus labore quia cupiditate.</p>
             </div>
         </div>
-        <hr style="width:90%; margin-left:60px"></hr>
-    </section3>
 
-    <section4>
-        <div class="content5">
-            <h2><bigtitle>Algorithm based on real car crash data</bigtitle></h2>
-            <br>
-            <p>
-                Our professional and sofisticated algorithm has been designed using real car crash data from the National Highway Traffic Safety Administration. Using this data our algorithm can differentiate when you drop your phone, brake too hard or had a minor accident avoiding false alarms
-            </p>
-        </div>
-        <hr style="width:90%; margin-left:60px"></hr>
-    </section4>
-
-    <section5>
-        <div class="content6">
-        <img src="http://www.sosmartapp.com/uploads/4/5/9/9/45991051/7994728.png?455" alt="img5" onclick="LogCookies()">
-        <div class="text">
-            <h2><bigtitle>Find Nearby Hospitals</bigtitle></h2>
-            <br>
-            <p>
-                In emergencies receiving medical atention on time can make the difference. SOSmart no matter where in the world you are, will show you a list of nearby hospitals and show you directions to get there as quick as possible
-            </p>
-        </div>
     </div>
-    <hr style="width:90%; margin-left:60px"></hr>
-    </section5>
 
-    <section6>
-        <h2 style="text-align: center; font-size: 40px; word-spacing: 3px;"><bigtitle>Real time monitoring platform for institutions</bigtitle></h2>
-        <br>
-        <br>
-        <p style="font-size:30px; word-spacing:3px; padding-left: 60px;">SOSmart offers a web platform which allows institutions to monitor emergencies 24 hours a day, 7 days a week  anywhere in the world.</p>
-        <br>
-        <br>
-        <img src="http://www.sosmartapp.com/uploads/4/5/9/9/45991051/5321869.png?688" alt="img6" style="border:1px solid blue;">
-        <br>
-        <br>
-        <p style="font-size: 30px; word-spacing:3px;padding-left:60px;">
-            Offer your clients and employees safety and security using our web platform at  very convenient prices. For further information please contact us.
+</section>
+
+<!-- usage section ends -->
+
+<!-- review section starts  -->
+
+
+
+<!-- review section ends -->
+
+<!-- pricing section starts  -->
+<div class="pt-20">
+<section class="pricing" id="pricing">
+
+    <div class="my-40 text-center">
+        <h3 class=" text-8xl font-mono text-pink-500" >Developers</h3>
+        
+    </div>
+
+    <!-- <div class="swiper-container image-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="{{url_for('static',filename='img/pic1.jpg')}}" alt=""></div>
+            <div class="swiper-slide"><img src="images/shot-02.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/shot-03.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/shot-04.jpg" alt=""></div>
+        </div>
+    </div> -->
+  
+    <div class=" grid grid-cols-4 items-center gap-32  w-full">
+<div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="rounded-t-lg" src="{{url_for('static',filename='img/img1.jpg')}}" alt="">
+    </a>
+    <div class="p-5">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Chirag Rohada</h5>
+        </a>
+        <p class="text-xl font-mono text-white ">
+            Backend Developer
         </p>
-    </section6>
+        
+    </div>
+</div>
+<div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="rounded-t-lg" src="{{url_for('static',filename='img/img1.jpg')}}" alt="">
+    </a>
+    <div class="p-5">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+        </a>
+        
+    </div>
+</div>
+<div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="rounded-t-lg" src="{{url_for('static',filename='img/img1.jpg')}}" alt="">
+    </a>
+    <div class="p-5">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+        </a>
+        
+    </div>
+</div>
+<div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="rounded-t-lg" src="{{url_for('static',filename='img/img1.jpg')}}" alt="">
+    </a>
+    <div class="p-5">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+        </a>
+       
+    </div>
+</div>
+</div>
 
-</main>
-</body>
+
+</section>
+</div>
+<!-- pricing section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+    <h1 class="heading">get in touch</h1>
+
+    <form action="">
+
+        <div class="inputBox">
+            <input type="text" required>
+            <label>name</label>
+        </div>
+        <div class="inputBox">
+            <input type="email" required>
+            <label>email</label>
+        </div>
+        <div class="inputBox">
+            <input type="number" required>
+            <label>number</label>
+        </div>
+        <div class="inputBox">
+            <textarea required name="" id="" cols="30" rows="10"></textarea>
+            <label>message</label>
+        </div>
+
+        <input type="submit" class="btn" value="send message">
+
+    </form>
+
+</section>
+
+<!-- contact section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+    </div>
+
+    <h1 class="credit"> created by <span> Accident Panic Team </span> | all rights reserved! </h1>
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- script part  -->
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 <script>
-function logCookies(cookies) {
-  for (const cookie of cookies) {
-    console.log(cookie.value);
-  }
+
+var swiper = new Swiper(".image-slider", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 2,
+        slideShadows: true,
+    },
+    loop:true,
+    autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+    },
+});    
+
+let menu = document.querySelector('#menu-bar');
+let navbar = document.querySelector('.navbar');
+
+menu.addEventListener('click', () =>{
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('nav-toggle');
+});
+
+window.onscroll = () =>{
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('nav-toggle');
 }
 
-browser.cookies
-  .getAll({
-    name: "session",
-  })
-  .then(logCookies);
-
-// "do not tell you"
-    const [red, green, blue] = [70, 100, 225]
-    const body = document.querySelector('body')
-
-    window.addEventListener('scroll', () => 
-    {
-        const y = 1 + (window.scrollY || window.pageYOffset) / 1000
-        const [r, g, b] = [red/y, green/y, blue/y].map(Math.round)
-        body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
-    })
 </script>
 
+
+</body>
 </html>
