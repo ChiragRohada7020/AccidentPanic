@@ -49,7 +49,7 @@ if __name__ == '__main__':
 
 
 
-myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+myclient = pymongo.MongoClient("mongodb+srv://ChiragRohada:s54icYoW4045LhAW@atlascluster.t7vxr4g.mongodb.net/test")
 
 mydb = myclient["IOT"]
 
