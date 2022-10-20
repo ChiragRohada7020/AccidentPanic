@@ -114,7 +114,7 @@ def login():
           if(bcrypt.check_password_hash(x['password'], password)):
             
             session['user_id']=x["email"]
-            return redirect(url_for('hello_world'))
+            return render_template('index.html',type="Logout",type1="logout") 
           else:
             error="invalid credential"
             return render_template('login.html',error=error)
