@@ -310,7 +310,7 @@ fetch('http://127.0.0.1:5000/iot1')
 
       window.setInterval(my, 4000)
       function my() {
-  fetch('https://accidentdetection1.herokuapp.com/iot')
+  fetch('/iot1')
   .then(response => response.json())  
   .then(json => {if(json.hello>count)
   {
