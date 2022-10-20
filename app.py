@@ -387,16 +387,18 @@ def check(email,password,name):
 
     return render_template('check.html',email=email,name=name,password=password)
 
-@app.route("/iot",methods = ['POST', 'GET'])
-def iot():
+@app.route("/iot/<id>/<lat>/<log>")
+def iot(id,lat,log):
     try:
-        if request.method == 'POST':
-            iot_id=request.form['iot_id']
-            location=request.form['location']
-            location=location.split(',')
+            
+            # iot_id=request.form['iot_id']
+            # location=request.form['location']
+            # location=location.split(',')
             mycol = mydb["accident"]
-            mycol.insert_one({"iot_id":iot_id,"location":[location[0],location[1]]})
-            print(location[0])
+            mycol.insert_one({"iot_id":int(id),"location":[float(lat),float(log)]})
+
+            print(id)
+            # print(location[1])
             return "accident detected"
     except:
         print("Not valid")
