@@ -415,6 +415,7 @@ def add_vehicle():
                 first_name=request.form['first_name']
                 mobile_no=request.form['mobile_no']
                 vehicle_name=request.form['vehicle_name']
+                address=request.form['address']
                 
                 f = request.files['file']
                 print(f)
@@ -422,7 +423,7 @@ def add_vehicle():
                 f.save(os.path.join(app.config['UPLOAD_FOLDER'], vehicle_no+'.png' ))
 
                 mycol = mydb["vehicle"]
-                mycol.insert_one({"vehicle_no":vehicle_no,"email":session['user_id'],"iot_id":None,"mobile_no":mobile_no,"vehicle_name":vehicle_name,"first_name":first_name})
+                mycol.insert_one({"vehicle_no":vehicle_no,"email":session['user_id'],"iot_id":None,"mobile_no":mobile_no,"vehicle_name":vehicle_name,"first_name":first_name,"address":address})
             return redirect(url_for('user_index'))
         except:
             return render_template('vehicle.html')

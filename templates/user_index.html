@@ -10,14 +10,89 @@
 </head>
 <body class="bg-gray-900 ">
     <div class=""> 
-        <nav class="bg-black h-20">
+        <!-- <nav class="bg-black h-20">
             <ul class="flex justify-end text-white text-2xl font-sans gap-10 pt-5 px-8">
                <a href="/"><li>Home</li></a> 
                 <a href="user_index"><li>User</li></a>
                 <a href={{type1}}><li>{{type1}}</li></a>
                 <a href="sign_up"><li>SignUp</li></a>
             </ul>
-        </nav>
+        </nav> -->
+        <div class="bg-white  w-full ">
+            <div class="flex items-center justify-between h-16 ">
+              <div class="px-6">
+                <img src="https://res.cloudinary.com/circulatesd/image/upload/b_auto,c_lpad,f_auto,h_500,q_auto,w_750/dpr_2.625/v1/nb-assets-2/circulatesd/pages/2381/meta_images/original/CNA_logo_Alt-FINAL.png" class="w-28 h-28" />
+              </div>
+              
+              <div class="hidden md:block">
+                
+                <ul class="flex flex-row font-serif gap-10 px-8 text-xl">
+                  <a href="/"><li
+                    
+                    class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+                  >
+                    Home
+                  </li></a>
+                  <a href="#">
+                  <li
+                   
+                    class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+                  >
+                    Notifiction
+                  </li>
+                </a>
+                  <a href="admin_accident"><li
+                   
+                    class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+                  >
+                    Accident
+                  </li></a>
+                  <a href="{{type1}}"><li
+                   
+                    class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+                  >
+                  {{type1}}
+                  </li></a>
+                </ul>
+              </div>
+              <div class=" md:hidden px-4">
+                <div>
+                  <img
+                     onclick="ok()" 
+                     src="https://static.thenounproject.com/png/2041962-200.png"
+                    class="w-10 h-10 hover:cursor-pointer   "
+                    
+                  />
+                </div>
+              </div>
+            </div>
+            <div class=" p-5 md:hidden hidden " id="mob_nav">
+              <ul class="flex flex-col gap-5 font-mono text-xl items-center  ">
+                <a href="/"><li
+                  
+                  class="  hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+                >
+                  Home
+                </li></a>
+             <a href="#">
+                <li
+                  
+                  class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+                >
+                  Notification
+                </li>
+              </a>
+                
+                <a href="{{type1}}"><li
+                  
+                  class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+                >
+                {{type1}}
+                </li>
+              </a>
+              </ul>
+            </div>
+          </div>
     </div>
     <div class="" id="bt1">
     <div style="padding-top: 90px; " >
@@ -112,8 +187,8 @@
                     
                 </div>
                 <div class="mb-6">
-                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email address</label>
-                    <input name="email" type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="john.doe@gmail.com" required="">
+                    <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Address</label>
+                    <input name="address" type="text" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="john.doe@gmail.com" required="">
                 </div> 
                 <div class="mb-6">
                     <input name="file" type="file" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Car Photo" required="">
@@ -150,6 +225,19 @@ const not_add_vehicle=()=>
    console.log( document.getElementById('bt1').className='')
    console.log( document.getElementById('data').className='')
 }
+const ok=(x)=>{
+          
+           
+          if(document.getElementById("mob_nav").className=="hidden")
+          {
+              document.getElementById("mob_nav").className="p-5 md:hidden"
+          }
+          else
+          {
+              document.getElementById("mob_nav").className="hidden"
+          }
+         
+      }
 
 
 

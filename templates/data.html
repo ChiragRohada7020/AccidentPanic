@@ -95,19 +95,16 @@
         
       </div>
  
-      <div class="flex justify-start gap-20 p-4">
-        <div class="flex flex-col justify-center">
-          <h1 class="text-3xl font-sans  text-yellow-200">Number Of Cases :</h1>
-         </div>
+      <div class="flex justify-center gap-20 p-4 ">
+        
         <!-- <img src="{{url_for('static',filename='bar_chart.svg')}}"> -->
-        <embed src="{{url_for('static',filename='bar_chart.svg')}}" width="800" height="500"
+        
+        <embed src="{{url_for('static',filename='bar_chart.svg')}}"  class="w-3/4"
 type="image/svg+xml"
  /> 
       </div>
       </div>
-      <div><embed src="{{url_for('static',filename='pie_chart.svg')}}" width="800" height="500"
-        type="image/svg+xml"
-         /> </div>
+      
       <script> const ok=()=>{
            
         if(document.getElementById("mob_nav").className=="hidden")

@@ -16,80 +16,89 @@
     </style>
 </head>
 <body class="bg-black">
-    <div class="bg-white  w-full ">
-        <div class="flex items-center justify-between h-16 ">
-          <div class="px-6">
-            <img src="https://www.iotforall.com/wp-content/uploads/2017/05/IoT-For-All-Logo.png" class="w-28 h-28" />
-          </div>
-          <div class="hidden md:block">
-            <ul class="flex flex-row font-mono gap-10 px-8 text-xl">
-                <a href="admin_index">   <li
-                
-                class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
-              >
-                Users
-              </li></a>
-              <li
-               
-                class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
-              >
-                Data
-              </li>
-              <li
-               
-                class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
-              >
-                Accident
-              </li>
-              <a href="admin_logout"><li
-               
-                class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
-              >
-                Logout
-              </li></a>
-            </ul>
-          </div>
-          <div class=" md:hidden px-4">
-            <div>
-              <img
-                 onclick="ok()" 
-                 src="https://static.thenounproject.com/png/2041962-200.png"
-                class="w-10 h-10 hover:cursor-pointer   "
-                
-              />
-            </div>
-          </div>
-        </div>
-        <div class=" p-5 md:hidden hidden " id="mob_nav">
-          <ul class="flex flex-col gap-5 font-mono text-xl items-center  ">
-            <li
-              
-              class="  hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
-            >
-              Users
-            </li>
-            <li
-              
-              class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
-            >
-              Data
-            </li>
-            <li
-              
-              class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
-            >
-              Project
-            </li>
-            <a href="admin_logout"><li
-              
-              class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
-            >
+  <div class="bg-white  w-full ">
+    <div class="flex items-center justify-between h-16 ">
+      <div class="px-6">
+        <img src="https://www.iotforall.com/wp-content/uploads/2017/05/IoT-For-All-Logo.png" class="w-28 h-28" />
+      </div>
+      <button type="button" class="px-4 py-2 mr-2 text-white bg-blue-500 rounded">
+        Accident 
+        <span id="accident" class="px-2 py-1 text-sm text-black bg-white rounded-full">0</span>
+      </button>
+      <div class="hidden md:block">
+        
+        <ul class="flex flex-row font-serif gap-10 px-8 text-xl">
+          <a href="admin_index"><li
+            
+            class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+          >
+            Users
+          </li></a>
+          <a href="data">
+          <li
+           
+            class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+          >
+            Data
+          </li>
+        </a>
+          <a href="admin_accident"><li
+           
+            class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+          >
+            Accident
+          </li></a>
+          <a href="admin_logout"><li
+           
+            class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+          >
             Logout
-            </li>
-          </a>
-          </ul>
+          </li></a>
+        </ul>
+      </div>
+      <div class=" md:hidden px-4">
+        <div>
+          <img
+             onclick="ok()" 
+             src="https://static.thenounproject.com/png/2041962-200.png"
+            class="w-10 h-10 hover:cursor-pointer   "
+            
+          />
         </div>
       </div>
+    </div>
+    <div class=" p-5 md:hidden hidden " id="mob_nav">
+      <ul class="flex flex-col gap-5 font-mono text-xl items-center  ">
+        <a href="admin_index"><li
+          
+          class="  hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+        >
+          Users
+        </li></a>
+     <a href="data">
+        <li
+          
+          class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+        >
+          Data
+        </li>
+      </a>
+        <li
+          
+          class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+        >
+          Project
+        </li>
+        <a href="admin_logout"><li
+          
+          class="hover:cursor-pointer hover:underline decoration-sky-500 decoration-2 hover:text-2xl duration-200"
+        >
+        Logout
+        </li>
+      </a>
+      </ul>
+    </div>
+  </div>
       
 
 
@@ -117,10 +126,10 @@
                   </button>
                       <div class="flex-1 min-w-0">
                           <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                            {{i['iot_id']}}
+                            Vehicle Id :- {{i['iot_id']}}
                           </p>
                           <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                            {{i['location']}}
+                            Vehicle Location :- {{i['location']}}
                           </p>
                       </div>
                       <a href=" " >
@@ -145,6 +154,50 @@
   </div>
    
     <script>
+
+
+var count=0;
+
+fetch('http://127.0.0.1:5000/iot1')
+  .then(response => response.json())  
+  .then(json => {if(json.hello>0)
+  {
+    count=json.hello;
+    document.getElementById("accident").innerText=json.hello
+    // alert(json.hello)
+  }})
+
+
+  const ok=(x)=>{
+          
+           
+          if(document.getElementById("mob_nav").className=="hidden")
+          {
+              document.getElementById("mob_nav").className="p-5 md:hidden"
+          }
+          else
+          {
+              document.getElementById("mob_nav").className="hidden"
+          }
+         
+      }
+
+
+
+      window.setInterval(my, 4000)
+      function my() {
+  fetch('/iot1')
+  .then(response => response.json())  
+  .then(json => {if(json.hello>count)
+  {
+    count=json.hello
+    const audio = new Audio('https://opus-bitrates.anthum.com/audio/music-96.opus');
+    
+    
+    document.getElementById("accident").innerText=json.hello
+    alert('accident occur')
+    // alert(json.hello)
+  }})}
       // Initialize and add the map
 function initMap(location) {
   // The location of Uluru
