@@ -97,7 +97,7 @@ def hello_world():
 
 @app.route("/login",methods = ['POST', 'GET'])
 def login():
-    global initial_user
+    
     
     error=""
 
@@ -119,12 +119,14 @@ def login():
             error="invalid credential"
             return render_template('login.html',error=error)
       except:
-          print("ahkj")
-      
+          print("some error occur of website")
+    else:
+       return render_template('login.html',error=error)
+
         
       
       
-    return render_template('login.html',error=error)
+    
 
 
 
@@ -186,7 +188,7 @@ def next():
 
 @app.route("/admin_login",methods = ['POST', 'GET'])
 def admin_login():
-    global initial_user
+    
     
     error=""
     if 'admin_login' in session:
@@ -553,12 +555,20 @@ def iot2():
 
 @app.route("/admin_accident")
 def accident():
-  if 'admin_id' in session:
-    
-    mycol = mydb["accident"]
-    x=mycol.find({})
+  try:
 
-  return render_template('accident.html',accident=x)
+    if 'admin_id' in session:
+    
+      mycol = mydb["accident"]
+      x=mycol.find({})
+      return render_template('accident.html',accident=x)
+    else:
+      return redirect(url_for('login'))
+
+  except:
+    return 'error occur n'
+
+    
 
 @app.route("/data")
 def data():
