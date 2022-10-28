@@ -86,9 +86,12 @@ initial_user = {
 
 @app.route("/")
 def hello_world():
-
+    
 
     if 'user_id' in session:
+        
+        
+
         return render_template('index.html',type="Logout",type1="logout") 
     return render_template('index.html',type="Login",type1="login") 
 
@@ -391,12 +394,14 @@ def check(email,password,name):
 
 @app.route("/iot/<id>/<lat>/<log>")
 def iot(id,lat,log):
-    try:
-            
+    try:   
+            # mycol = mydb["vehicle"]
+            # mycol.find({'iot_id':id})
             # iot_id=request.form['iot_id']
             # location=request.form['location']
             # location=location.split(',')
             mycol = mydb["accident"]
+
             mycol.insert_one({"iot_id":int(id),"location":[float(lat),float(log)]})
 
             print(id)
@@ -482,7 +487,7 @@ def assign(id):
     x=mycol.find({"vehicle_no":id})
     for i in x:
        print(i)
-       mycol.update_one({'vehicle_no':id},{"$set":{'iot_id':i['_id']}})
+       mycol.update_one({'vehicle_no':id},{"$set":{'iot_id':str(i['_id'])}})
        
        msgg = Message(
                 'Hello',
@@ -548,7 +553,7 @@ def iot1():
   except:  
     return "error occur"
      
-
+ 
 @app.route("/iot2")
 def iot2():
   return render_template('user1.html')
@@ -605,6 +610,14 @@ def data():
 def user_data(id):
   mycol = mydb['vehicle']
   y=mycol.find({'vehicle_no':id},{'_id':0})
+  
+  return y[0];
+
+@app.route("/user_data2/<id>")
+def user_data2(id):
+  print(id)
+  mycol = mydb['vehicle']
+  y=mycol.find({'iot_id':id},{'_id':0})
   
   return y[0];
 
