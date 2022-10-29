@@ -9,7 +9,7 @@
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <!-- custom css file link  -->
     <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
 
@@ -31,7 +31,7 @@
         <a href="#features">features</a>
         <a href="#about">about</a>
         <a href="#usage">usage</a>
-        <a href="user_index">Users</a>
+        <a href=" {{url_for('user_index')}}">Users</a>
         <a href="/{{type1}}">{{type1}}</a>
     </nav>
 
@@ -73,7 +73,7 @@
     <div class="box-container">
 
         <div class="box">
-            <i class="fas fa-magic"></i>
+            <i class="fa fa-hospital-alt"></i>
             <h3>Timely Medical Help</h3>
             <p>We provide Medical assistance within golden hour to the accident victim 
             </p>
@@ -82,12 +82,12 @@
             <i class="fas fa-shield-alt"></i>
             <h3>Accident Detection</h3>
             <p>We have deployed an accelerometer sensor which detects the frequency i.e: the vibration that takes place while hitting
-                .</p>
+                </p>
         </div>
         <div class="box">
             <i class="fas fa-globe"></i>
             <h3>Privacy protect</h3>
-            <p>All the information that user provides while registering are kept secured.</p>
+            <p>All the information that user provides while registering are kept secured</p>
         </div>
         <div class="box">
             <i class="fas fa-map-marker-alt"></i>
@@ -96,13 +96,13 @@
         </div>
         <div class="box">
             <i class="fas fa-cogs"></i>
-            <h3>powerfull settings</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque enim ad neque. Voluptatem alias beatae accusamus laudantium nisi assumenda libero.</p>
+            <h3>Effective emergency notification</h3>
+            <p>No matter what your emergency contacts are doing, device will start a loud alarm which will call their attention </p>
         </div>
         <div class="box">
             <i class="fas fa-headset"></i>
             <h3>24 x 7 service</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque enim ad neque. Voluptatem alias beatae accusamus laudantium nisi assumenda libero.</p>
+            <p>We are always here for you</p>
         </div>
 
     </div>
