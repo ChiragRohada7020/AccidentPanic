@@ -567,7 +567,7 @@ def accident():
       x=mycol.find({})
       return render_template('accident.html',accident=x)
     else:
-      return redirect(url_for('login'))
+      return redirect(url_for('admin_login'))
 
   except:
     return 'error occur n'
