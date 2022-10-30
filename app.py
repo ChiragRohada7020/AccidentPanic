@@ -150,14 +150,14 @@ def admin_index():
         log=session['admin_loc'][1]
         print(lat)
         loc="hello"
-        lst = [3.64, 5.2, 9.42, 9.35, 8.5, 8]
+        lst = [3.64, 5.2, 19.0499205, 19.0471737, 8.5, 8]
         K = float(lat)
         location=closest(lst, K)
-
-        if(location==9.35):
+        print(location)
+        if(location==19.0499205):
           loc='Control Room 1'
 
-        if(location==9.42):
+        if(location==19.0471737):
           loc='Control Room 2'
            
         print("hello"+session['admin_loc'][0])
@@ -200,11 +200,10 @@ def admin_login():
     if request.method == 'POST':
       email=request.form['email']
       password=request.form['password']
-      # lat=request.form['lat']
-      # log=request.form['log']
-      # print(log)
-      lat='19';
-      log='18';
+      lat=request.form['lat']
+      log=request.form['log']
+      print(log,lat )
+      
 
       if(float(log)):
         try:
