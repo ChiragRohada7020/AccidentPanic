@@ -1,54 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accident Panic</title>
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 
     <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='dist/css/output.css')}}"
+    />
 
-    <link rel="stylesheet" href="static/dist/css/style18.css">
+    <link rel="stylesheet" href="static/dist/css/style18.css" />
+  </head>
+  <body>
+    <!-- header section starts  -->
 
-</head>
-<body>
-    
-<!-- header section starts  -->
+    <header>
+      <img
+        src="https://res.cloudinary.com/circulatesd/image/upload/b_auto,c_lpad,f_auto,h_500,q_auto,w_750/dpr_2.625/v1/nb-assets-2/circulatesd/pages/2381/meta_images/original/CNA_logo_Alt-FINAL.png"
+        alt=""
+        width="80px"
+      />
 
-<header>
+      <div id="menu-bar" class="fas fa-bars"></div>
 
-    <img src="https://res.cloudinary.com/circulatesd/image/upload/b_auto,c_lpad,f_auto,h_500,q_auto,w_750/dpr_2.625/v1/nb-assets-2/circulatesd/pages/2381/meta_images/original/CNA_logo_Alt-FINAL.png" alt="" width="80px">
-
-    <div id="menu-bar" class="fas fa-bars"></div>
-
-    <nav class="navbar">
+      <nav class="navbar">
         <a href="#home">home</a>
         <a href="#features">features</a>
         <a href="#about">about</a>
         <a href="#usage">usage</a>
         <a href=" {{url_for('user_index')}}">Users</a>
         <a href="/{{type1}}">{{type1}}</a>
-    </nav>
+      </nav>
+    </header>
 
-</header>
+    <!-- header section ends -->
 
-<!-- header section ends -->
+    <!-- home section starts  -->
 
-<!-- home section starts  -->
+    <section class="mt-52 " id="home" >
+      
+     
 
-<section class="home" id="home">
-
-    <div class="my-40">
-        <h3 class="font-bold text-4xl text-black" >Accident Panic</h3>
-        
-    </div>
-
-    <!-- <div class="swiper-container image-slider">
+      <!-- <div class="swiper-container image-slider">
         <div class="swiper-wrapper">
             <div class="swiper-slide"><img src="{{url_for('static',filename='img/pic1.jpg')}}" alt=""></div>
             <div class="swiper-slide"><img src="images/shot-02.jpg" alt=""></div>
@@ -56,101 +65,135 @@
             <div class="swiper-slide"><img src="images/shot-04.jpg" alt=""></div>
         </div>
     </div> -->
+    <div class="">
+    <h1 class="text-center text-8xl font-bold text-black font-sans">Save Your <span class="text-green-500">Life</span> </h1>
+  </div>
   
-    
+  <div class="mt-52 flex flex-col-reverse md:grid md:grid-cols-2 ">
+    <div>
+  <img  src="{{url_for('static',filename='img/Ambulance.gif')}}" alt="" width="400px">
+</div>
+<div class="flex justify-center flex-col items-center">
+  <h1 class="text-4xl font-sans text-center tracking-widest"> Automatic Smart Accident Detection (ASAD) is an auto-detection unit system that immediately notifies an Emergency Contact through a text message when an instant change in acceleration, rotation and an impact force in an end of the vehicle is detected by the system, detailing the location and time of the accident.</h1>
 
-
-</section>
-
-<!-- home section ends -->
-
-<!-- features section starts  -->
-
-<section class="features" id="features">
-
-    <h1 class="heading">Website features</h1>
-
-    <div class="box-container">
-
-        <div class="box">
-            <i class="fa fa-hospital-alt"></i>
-            <h3>Timely Medical Help</h3>
-            <p>We provide Medical assistance within golden hour to the accident victim 
-            </p>
-        </div>
-        <div class="box">
-            <i class="fas fa-shield-alt"></i>
-            <h3>Accident Detection</h3>
-            <p>We have deployed an accelerometer sensor which detects the frequency i.e: the vibration that takes place while hitting
-                </p>
-        </div>
-        <div class="box">
-            <i class="fas fa-globe"></i>
-            <h3>Privacy protect</h3>
-            <p>All the information that user provides while registering are kept secured</p>
-        </div>
-        <div class="box">
-            <i class="fas fa-map-marker-alt"></i>
-            <h3>location tracking</h3>
-            <p>We provide the live location of the accident victim to the control room.</p>
-        </div>
-        <div class="box">
-            <i class="fas fa-cogs"></i>
-            <h3>Effective emergency notification</h3>
-            <p>No matter what your emergency contacts are doing, device will start a loud alarm which will call their attention </p>
-        </div>
-        <div class="box">
-            <i class="fas fa-headset"></i>
-            <h3>24 x 7 service</h3>
-            <p>We are always here for you</p>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- features section ends -->
-
-<!-- about section starts  -->
-
-<section class="about" id="about">
-
-    <h1 class="heading">About The Website</h1>
-
-<div class="row">
-        
-    <div class="image">
-        <img src="images/about-img.png" alt="">
-    </div>    
-
-    <div class="content">
-        <h3>Take a Look Around our Website</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus labore perspiciatis iusto debitis, explicabo neque earum accusamus adipisci eius, nobis laboriosam, autem modi porro quisquam saepe assumenda fuga quod ipsa!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit rerum excepturi alias quas voluptatibus provident voluptatum sapiente quos enim praesentium?</p>
-    </div>
-
+  <div class="flex pt-20">
+    <button class="bg-green-500 hover:bg-green-700 text-4xl text-white font-bold py-8 px-8 rounded">
+      Sign_Up
+    </button>
+  </div>
 </div>
 
-</section>
+</div>
+  
+    </section>
 
-<!-- about section ends -->
+    <!-- home section ends -->
 
-<!-- usage section starts  -->
+    <!-- features section starts  -->
 
-<section class="usage" id="usage">
+    <section class="features" id="features">
+      <h1 class="heading">Website features</h1>
 
-    <h1 class="heading">how it works?</h1>
+      <div class="box-container">
+        <div class="box">
+          <i class="fa fa-hospital-alt"></i>
+          <h3>Timely Medical Help</h3>
+          <p>
+            We provide Medical assistance within golden hour to the accident
+            victim
+          </p>
+        </div>
+        <div class="box">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Accident Detection</h3>
+          <p>
+            We have deployed an accelerometer sensor which detects the frequency
+            i.e: the vibration that takes place while hitting
+          </p>
+        </div>
+        <div class="box">
+          <i class="fas fa-globe"></i>
+          <h3>Privacy protect</h3>
+          <p>
+            All the information that user provides while registering are kept
+            secured
+          </p>
+        </div>
+        <div class="box">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>location tracking</h3>
+          <p>
+            We provide the live location of the accident victim to
+            the control room.
+          </p>
+        </div>
+        <div class="box">
+          <i class="fas fa-cogs"></i>
+          <h3>Effective emergency notification</h3>
+          <p>
+            No matter what your emergency contacts are doing, device will start
+            a loud alarm which will call their attention
+          </p>
+        </div>
+        <div class="box">
+          <i class="fas fa-headset"></i>
+          <h3>24 x 7 service</h3>
+          <p>We are always here for you</p>
+        </div>
+      </div>
+    </section>
 
-    <div class="row">
+    <!-- features section ends -->
 
+    <!-- about section starts  -->
+
+    <section class="about" id="about">
+      <h1 class="heading">About The Website</h1>
+
+      <div class="row">
+        <div class="image">
+          <img  src="{{url_for('static',filename='img/empl.png')}}" alt="" width=" ">
+
+        </div>
+
+        <div class="content">
+          <h3>Take a Look Around our Website</h3>
+          <p>
+            Accidents are a major public issues worldwide. The huge number of injuries and deaths as a result accident uncovers the story of global crisis of road safety.
+
+            The most obvious reason for a person’s death during the accidents is unavailability of the first aid provision, which is due to the delay in the information of the accident being reached to the Police station or to the hospital.
+            
+            Road collisions are the second leading cause of death for people between age 5 and 29 and third leading cause for people between 30 and 41.
+            
+            According to statistical projection of traffic fatalities, the two-year comparison  of total driver participation in mortal crashes presented a three percent increase from 43,840 in 2011 to 45,337 in 2012.
+          </p>
+          <!-- <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit rerum
+            excepturi alias quas voluptatibus provident voluptatum sapiente quos
+            enim praesentium?
+          </p> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- about section ends -->
+
+    <!-- usage section starts  -->
+
+    <section class="usage" id="usage">
+      <h1 class="heading">how it works?</h1>
+
+      <div class="row">
         <div class="box-container">
-            <div class="box">
-                <i class="fas fa-sort-amount-down"></i>
-                <h3 class="font-mono">Control room</h3>
-                <p> control room acts as a mediator between accident victim & hospitals/police station which is also a USP of our taarith
-                </p>
-            </div>
-            <!-- <div class="box">
+          <div class="box">
+            <i class="fas fa-sort-amount-down"></i>
+            <h3 class="font-mono">Control room</h3>
+            <p>
+              control room acts as a mediator between accident victim &
+              hospitals/police station which is also a USP of our taarith
+            </p>
+          </div>
+          <!-- <div class="box">
                 <i class="fas fa-user-clock"></i>
                 <h3 class="">Notification to registered user contact</h3>
                 <p>while registering we also ask user to provide the contact number of their near dear ones, just in case of emergency
@@ -158,36 +201,35 @@
             </div> -->
         </div>
 
-        <img class="divider" src="images/usage-img.png" alt="">
+        <img class="divider" src="images/usage-img.png" alt="" />
 
         <div class="box-container">
-            <div class="box">
-                <i class="fas fa-sort-amount-up"></i>
-                <h3 class="font-mono">Notification</h3>
-                <p>while registering we also ask user to provide the contact number of their near dear ones, just in case of emergency</p>
-            </div>
-            <!-- <div class="box">
+          <div class="box">
+            <i class="fas fa-sort-amount-up"></i>
+            <h3 class="font-mono">Notification</h3>
+            <p>
+              while registering we also ask user to provide the contact number
+              of their near dear ones, just in case of emergency
+            </p>
+          </div>
+          <!-- <div class="box">
                 <i class="fas fa-fire"></i>
                 <h3>calories burned</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem dolor nihil dicta eveniet quam nam explicabo, natus labore quia cupiditate.</p>
             </div> -->
         </div>
+      </div>
+    </section>
 
-    </div>
+    <!-- usage section ends -->
 
-</section>
+    <!-- review section starts  -->
 
-<!-- usage section ends -->
+    <!-- review section ends -->
 
-<!-- review section starts  -->
-
-
-
-<!-- review section ends -->
-
-<!-- pricing section starts  -->
-<div class="pt-20">
-<!-- <section class="pricing" id="pricing">
+    <!-- pricing section starts  -->
+    <div class="pt-20">
+      <!-- <section class="pricing" id="pricing">
 
     <div class="my-40 text-center">
         <h3 class=" text-8xl font-mono text-pink-500" >Developers</h3>
@@ -203,8 +245,8 @@
             <div class="swiper-slide"><img src="images/shot-04.jpg" alt=""></div>
         </div>
     </div> -->
-  
-    <!-- <div class=" flex justify-center flex-col md:flex-row  items-center gap-32  w-full">
+
+      <!-- <div class=" flex justify-center flex-col md:flex-row  items-center gap-32  w-full">
 <div class=" bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
         <img class="rounded-t-lg" src="{{url_for('static',filename='img/img1.jpg')}}" alt="">
@@ -255,118 +297,93 @@
 </div>
 
 
-</section> --> -->
-</div>
-<!-- pricing section ends -->
+</section> -->
+      -->
+    </div>
+    <!-- pricing section ends -->
 
-<!-- contact section starts  -->
+    <!-- contact section starts  -->
 
-<section class="contact" id="contact">
+    <section class="contact" id="contact">
+      <h1 class="heading">get in touch</h1>
 
-    <h1 class="heading">get in touch</h1>
-
-    <form action="">
-
+      <form action="">
         <div class="inputBox">
-            <input type="text" required>
-            <label>name</label>
+          <input type="text" required />
+          <label>name</label>
         </div>
         <div class="inputBox">
-            <input type="email" required>
-            <label>email</label>
+          <input type="email" required />
+          <label>email</label>
         </div>
         <div class="inputBox">
-            <input type="number" required>
-            <label>number</label>
+          <input type="number" required />
+          <label>number</label>
         </div>
         <div class="inputBox">
-            <textarea required name="" id="" cols="30" rows="10"></textarea>
-            <label>message</label>
+          <textarea required name="" id="" cols="30" rows="10"></textarea>
+          <label>message</label>
         </div>
 
-        <input type="submit" class="btn" value="send message">
+        <input type="submit" class="btn" value="send message" />
+      </form>
+    </section>
 
-    </form>
+    <!-- contact section ends -->
 
-</section>
+    <!-- footer section starts  -->
 
-<!-- contact section ends -->
-
-<!-- footer section starts  -->
-
-<section class="footer">
-
-    <div class="share">
+    <section class="footer">
+      <div class="share">
         <a href="#" class="fab fa-facebook-f"></a>
         <a href="#" class="fab fa-twitter"></a>
         <a href="#" class="fab fa-instagram"></a>
         <a href="#" class="fab fa-linkedin"></a>
-    </div>
+      </div>
 
-    <h1 class="credit"> created by <span> Accident Panic Team </span> | all rights reserved! </h1>
+      <h1 class="credit">
+        created by <span> Accident Panic Team </span> | all rights reserved!
+      </h1>
+    </section>
 
-</section>
+    <!-- footer section ends -->
 
-<!-- footer section ends -->
+    <!-- script part  -->
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- script part  -->
-
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-<script>
-
-var swiper = new Swiper(".image-slider", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    coverflowEffect: {
-        rotate: 0,
-        stretch: 0,
-        depth: 100,
-        modifier: 2,
-        slideShadows: true,
-    },
-    loop:true,
-    autoplay: {
+    <script>
+      var swiper = new Swiper(".image-slider", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2,
+          slideShadows: true,
+        },
+        loop: true,
+        autoplay: {
           delay: 2000,
           disableOnInteraction: false,
-    },
-});    
+        },
+      });
 
-let menu = document.querySelector('#menu-bar');
-let navbar = document.querySelector('.navbar');
+      let menu = document.querySelector("#menu-bar");
+      let navbar = document.querySelector(".navbar");
 
-menu.addEventListener('click', () =>{
-    menu.classList.toggle('fa-times');
-    navbar.classList.toggle('nav-toggle');
-});
+      menu.addEventListener("click", () => {
+        menu.classList.toggle("fa-times");
+        navbar.classList.toggle("nav-toggle");
+      });
 
-window.onscroll = () =>{
-    menu.classList.remove('fa-times');
-    navbar.classList.remove('nav-toggle');
-}
-
-</script>
-
-
-</body>
+      window.onscroll = () => {
+        menu.classList.remove("fa-times");
+        navbar.classList.remove("nav-toggle");
+      };
+    </script>
+  </body>
 </html>
