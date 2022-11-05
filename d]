@@ -1,0 +1,152 @@
+[33mcommit 5aa9c6e99452ab8148fd9f5292e04aa6308b1113[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31mheroku/master[m[33m)[m
+Author: = <chiragrohada40@gmail.com>
+Date:   Sat Nov 5 01:49:34 2022 +0530
+
+    index changes
+
+[33mcommit a4c9320b11421b9085f5a94c1130c367b6bfc68c[m
+Author: = <chiragrohada40@gmail.com>
+Date:   Mon Oct 31 11:11:11 2022 +0530
+
+    changed the color
+
+[33mcommit b1bc8753c56ba81c9a1285a5495906444ba94b81[m
+Author: = <chiragrohada40@gmail.com>
+Date:   Mon Oct 31 00:02:25 2022 +0530
+
+    admin login
+
+[33mcommit 851bdc9814dfe15b01a47234d83654503385cf29[m[33m ([m[1;31mchirag/master[m[33m)[m
+Author: = <chiragrohada40@gmail.com>
+Date:   Sun Oct 30 17:20:36 2022 +0530
+
+    location and control room
+
+[33mcommit b2012aff8b8763ad8b24b17a4234010f14208370[m
+Author: = <chiragrohada40@gmail.com>
+Date:   Sun Oct 30 09:02:19 2022 +0530
+
+    otp
+
+[33mcommit d33333749143ab57d022f6e4e523b701b5eb4dbc[m
+Author: = <chiragrohada40@gmail.com>
+Date:   Sat Oct 29 16:32:03 2022 +0530
+
+    update accident baackend
+
+[33mcommit abb0fac071dfd3136b8a68a52e83e2c716343db4[m
+Author: = <chiragrohada40@gmail.com>
+Date:   Sat Oct 29 02:22:52 2022 +0530
+
+    change admin and iot_id string
+
+[33mcommit 26d53408c8950e9ea04c2f2450434a0e8aa1da0b[m
+Author: = <chiragrohada40@gmail.com>
+Date:   Sun Oct 23 00:03:58 2022 +0530
+
+    fixing bugs
+
+[33mcommit 2e72c12fe79c36b0ade5f6da0b1eb7d0ea2790b6[m
+Author: = <chiragrohada40@gmail.com>
+Date:   Fri Oct 21 09:55:42 2022 +0530
+
+    change made in admin index and user index
+
+[33mcommit 4f650be74f7d9a28c8e11a28767d5bb57e7c735c[m
+Author: = <chiragrohada40@gmail.com>
+Date:   Fri Oct 21 09:47:33 2022 +0530
+
+    change made in admin index and user index
+
+[33mcommit 2e96a64b35db1dc9b825d91abb9e9cbaa346aba3[m
+Author: = <chiragrohada40@gmail.com>
+Date:   Fri Oct 21 01:42:37 2022 +0530
+
+    changed the add vehicle content and placeholder
+
+[33mcommit 1270aec8fd0344b816c5c9d881d16556aeb2bd1c[m
+Author: = <chiragrohada40@gmail.com>
+Date:   Fri Oct 21 01:24:46 2022 +0530
+
+    change the iot config
+
+[33mcommit 9faa5271bb449b8187f5935352dff3f3d18d6c5a[m
+Author: = <chiragrohada40@gmail.com>
+Date:   Thu Oct 20 17:07:56 2022 +0530
+
+    change the fetch of accident
+
+[33mcommit abf4e0936396c88a3ea4882f8bb292877cb40dec[m
+Author: = <chiragrohada40@gmail.com>
+Date:   Thu Oct 20 16:52:47 2022 +0530
+
+    change the fetch of accident
+
+[33mcommit cf7a86bf59666202d7ac973e5079245aefb09d47[m
+Author: = <chiragrohada40@gmail.com>
+Date:   Thu Oct 20 08:48:55 2022 +0530
+
+    changes in width and responsive
+
+[33mcommit 70e747eb5bb2bd0d601ab24b5328704a08458b6e[m
+Author: = <chiragrohada40@gmail.com>
+Date:   Thu Oct 20 08:38:38 2022 +0530
+
+    changes in width and responsive
+
+[33mcommit cb9ecfebae6b400aa62f4e45e61adb62f8e6bb86[m
+Author: = <chiragrohada40@gmail.com>
+Date:   Thu Oct 20 08:30:56 2022 +0530
+
+    changes in width and responsive
+
+[33mcommit 8c38404a632be28d0703ae77cc6922b6ca99a1b6[m
+Author: = <chiragrohada40@gmail.com>
+Date:   Wed Oct 19 23:28:19 2022 +0530
+
+    error resolved for herkou
+
+[33mcommit 773f136ac9050d1beed2a5ad1319778cbca9c079[m
+Author: = <chiragrohada40@gmail.com>
+Date:   Wed Oct 19 23:10:49 2022 +0530
+
+    added gunicorn and ready to deploy on heroku
+
+[33mcommit 7620dc35a9e0e9789967f9fa67906e8574e1b786[m
+Merge: 906df18 07b7559
+Author: = <chiragrohada40@gmail.com>
+Date:   Wed Oct 19 19:57:33 2022 +0530
+
+    connected with mongo db cluster
+
+[33mcommit 906df18eb9575746e4a2331ad08e2a34a0a5da93[m
+Author: = <chiragrohada40@gmail.com>
+Date:   Wed Oct 19 19:46:49 2022 +0530
+
+    connected with mongo db cluster
+
+[33mcommit 07b755995aa05f0247c35a02cf2cc6b956a2dfa6[m
+Author: = <chiragrohada40@gmail.com>
+Date:   Tue Oct 18 19:15:04 2022 +0530
+
+    s
+
+[33mcommit 10c7beb6703dd8f442573379d486da87a1b50756[m
+Author: = <chiragrohada40@gmail.com>
+Date:   Tue Oct 18 19:09:05 2022 +0530
+
+    ready to deploy
+
+[33mcommit 0021f1b16d4acd66bf6b7d4b1f76fe349d3d279a[m
+Author: ChiragRohada7020 <115901486+ChiragRohada7020@users.noreply.github.com>
+Date:   Sun Oct 16 23:06:59 2022 +0530
+
+    Create README.md
+    
+    Readme
+
+[33mcommit 7a23550dc6c093493143dcc6c3d5ea1c44591792[m
+Author: = <chiragrohada40@gmail.com>
+Date:   Sun Oct 16 22:40:04 2022 +0530
+
+    AccidentPanic
