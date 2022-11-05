@@ -5,8 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='dist/css/output.css')}}"
+    />
 </head>
-<body>
-    <h1>you are not logged in {{link}} </h1>
+<body > 
+<div class="flex flex-col justify-center items-center">
+    <div class="">
+    <img  src="{{url_for('static',filename='img/astronaut-in-tea-break.gif')}}" alt="" width="600px">
+</div>
+<div >
+    <h1 class="text-4xl text-center font-mono">Some Thing Went Wrong !</h1>
+</div>
+</div>
+
 </body>
 </html>

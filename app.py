@@ -28,6 +28,7 @@ from pymongo import mongo_client
 
 
 
+
 def closest(lst, K):
       
      lst = np.asarray(lst)
@@ -87,13 +88,15 @@ initial_user = {
 @app.route("/")
 def hello_world():
     
-
-    if 'user_id' in session:
+  try:
+        if 'user_id' in session:
         
-        
+          
 
-        return render_template('index.html',type="Logout",type1="logout") 
-    return render_template('index.html',type="Login",type1="login") 
+          return render_template('index.html',type="Logout",type1="logout") 
+        return render_template('index.html',type="Login",type1="login") 
+  except:
+    return render_template('error.html')
 
 
 
@@ -112,7 +115,7 @@ def login():
 
       try:
           mycol = mydb['Users']
-          x=mycol.find_one({"email":email})
+          x= mycol.find_one({"email":email})
           
           if(bcrypt.check_password_hash(x['password'], password)):
             
@@ -122,7 +125,7 @@ def login():
             error="invalid credential"
             return render_template('login.html',error=error)
       except:
-          print("some error occur of website")
+          return render_template('error.html')
     else:
        return render_template('login.html',error=error)
 
