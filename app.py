@@ -650,3 +650,19 @@ def mus(id):
 
         
     return "Not Valid"
+
+@app.route("/mus_send")
+def mus_send():
+    try:   
+            # mycol = mydb["vehicle"]
+            # mycol.find({'iot_id':id})
+            # iot_id=request.form['iot_id']
+            # location=request.form['location']
+            # location=location.split(',')
+            
+            return mus
+    except:
+        print("Not valid")
+
+        
+    return "Not Valid"
