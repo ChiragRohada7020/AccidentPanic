@@ -631,3 +631,22 @@ def user_data2(id):
 #     full_path = os.path.join(app.root_path, UPLOAD_FOLDER)
 #     logging.info(full_path)
 #     return send_from_directory(full_path, filename, as_attachment=True)
+
+
+@app.route("/mus/<id>/")
+def mus(id):
+    try:   
+            # mycol = mydb["vehicle"]
+            # mycol.find({'iot_id':id})
+            # iot_id=request.form['iot_id']
+            # location=request.form['location']
+            # location=location.split(',')
+            global mus
+            mus=id
+            # print(location[1])
+            return mus
+    except:
+        print("Not valid")
+
+        
+    return "Not Valid"
