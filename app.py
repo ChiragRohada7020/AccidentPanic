@@ -635,7 +635,7 @@ def user_data2(id):
 #     logging.info(full_path)
 #     return send_from_directory(full_path, filename, as_attachment=True)
 
-
+global mus
 @app.route("/mus/<id>/")
 def mus(id):
     try:   
@@ -644,7 +644,7 @@ def mus(id):
             # iot_id=request.form['iot_id']
             # location=request.form['location']
             # location=location.split(',')
-            global mus
+            
             mus=id
             # print(location[1])
             return mus
