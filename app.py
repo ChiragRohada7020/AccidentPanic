@@ -23,6 +23,8 @@ from werkzeug.utils import secure_filename
 from werkzeug.datastructures import  FileStorage
 from flask_bcrypt import Bcrypt
 from pymongo import mongo_client
+from flask_cors import CORS
+
 
 
 
@@ -41,6 +43,7 @@ def closest(lst, K):
 
 
 app = Flask(__name__)
+CORS(app)
 app.secret_key=os.urandom(24)
 app.config['UPLOAD_FOLDER']='./static/img'
 bcrypt = Bcrypt(app)
@@ -651,14 +654,12 @@ def mus(id):
         
     return "Not Valid"
 
-@app.route("/mus_send")
+@app.route("/mus_send", methods=['GET'])
 def mus_send():
     try:   
-            # mycol = mydb["vehicle"]
-            # mycol.find({'iot_id':id})
-            # iot_id=request.form['iot_id']
-            # location=request.form['location']
-            # location=location.split(',')
+            # response = flask.jsonify({'some': 'data'})
+            # response.headers.add('Access-Control-Allow-Origin', '*')
+            # return response
             
             return mus
     except:
