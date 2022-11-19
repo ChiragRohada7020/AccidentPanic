@@ -636,7 +636,7 @@ def user_data2(id):
 #     return send_from_directory(full_path, filename, as_attachment=True)
 
 global mus
-@app.route("/mus/<id>/")
+@app.route("/mus/<id>/", methods=['GET'])
 def mus(id):
     try:   
             # mycol = mydb["vehicle"]
