@@ -53,10 +53,7 @@
 
     <!-- home section starts  -->
 
-    <section class="mt-52" id="home" >
-      
-     
-
+    <section class="mt-52" id="home">
       <!-- <div class="swiper-container image-slider">
         <div class="swiper-wrapper">
             <div class="swiper-slide"><img src="{{url_for('static',filename='img/pic1.jpg')}}" alt=""></div>
@@ -65,26 +62,41 @@
             <div class="swiper-slide"><img src="images/shot-04.jpg" alt=""></div>
         </div>
     </div> -->
-    <div class="">
-    <h1 class="text-center text-8xl font-bold text-black font-sans">Save Your <span class="text-green-500">Life</span> </h1>
-  </div>
-  
-  <div class="mt-52 flex flex-col-reverse md:grid md:grid-cols-2 ">
-    <div>
-  <img  src="{{url_for('static',filename='img/Ambulance.gif')}}" alt="" width="400px">
-</div>
-<div class="flex justify-center flex-col items-center">
-  <h1 class="text-4xl font-sans text-center tracking-widest"> Automatic Smart Accident Detection (ASAD) is an auto-detection unit system that immediately notifies an Emergency Contact through a text message when an instant change in acceleration, rotation and an impact force in an end of the vehicle is detected by the system, detailing the location and time of the accident.</h1>
+      <div class="">
+        <h1 class="text-center text-8xl font-bold text-black font-sans">
+          Save Your <span class="text-green-500">Life</span>
+        </h1>
+      </div>
 
-  <div class="flex pt-20">
-    <button class="bg-green-500 hover:bg-green-700 text-4xl text-white font-bold py-8 px-8 rounded">
-      Sign_Up
-    </button>
-  </div>
-</div>
+      <div class="mt-52 flex flex-col-reverse md:grid md:grid-cols-2">
+        <div>
+          <img
+          
+            src="{{url_for('static',filename='img/Ambulance.gif')}}"
+            alt=""
+            width="400px"
+          />
+        </div>
+        <div class="flex justify-center flex-col items-center">
+          <h1 class="text-4xl font-sans text-center tracking-widest">
+            Automatic Smart Accident Detection (ASAD) is an auto-detection unit
+            system that immediately notifies an Emergency Contact through a text
+            message when an instant change in acceleration, rotation and an
+            impact force in an end of the vehicle is detected by the system,
+            detailing the location and time of the accident.
+          </h1>
 
-</div>
-  
+          <div class="flex pt-20">
+            <a href=" {{url_for('sign_up')}}">
+              <button
+                class="bg-green-500 hover:bg-green-700 text-4xl text-white font-bold py-8 px-8 rounded"
+              >
+                Sign_Up
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- home section ends -->
@@ -152,20 +164,28 @@
 
       <div class="row">
         <div class="image">
-          <img  src="{{url_for('static',filename='img/empl.png')}}" alt="" width=" ">
-
+          <img
+            src="{{url_for('static',filename='img/empl.png')}}"
+            alt=""
+            width=" "
+          />
         </div>
 
         <div class="content">
           <h3>Take a Look Around our Website</h3>
           <p>
-            Accidents are a major public issues worldwide. The huge number of injuries and deaths as a result accident uncovers the story of global crisis of road safety.
-
-            The most obvious reason for a person’s death during the accidents is unavailability of the first aid provision, which is due to the delay in the information of the accident being reached to the Police station or to the hospital.
-            
-            Road collisions are the second leading cause of death for people between age 5 and 29 and third leading cause for people between 30 and 41.
-            
-            According to statistical projection of traffic fatalities, the two-year comparison  of total driver participation in mortal crashes presented a three percent increase from 43,840 in 2011 to 45,337 in 2012.
+            Accidents are a major public issues worldwide. The huge number of
+            injuries and deaths as a result accident uncovers the story of
+            global crisis of road safety. The most obvious reason for a person’s
+            death during the accidents is unavailability of the first aid
+            provision, which is due to the delay in the information of the
+            accident being reached to the Police station or to the hospital.
+            Road collisions are the second leading cause of death for people
+            between age 5 and 29 and third leading cause for people between 30
+            and 41. According to statistical projection of traffic fatalities,
+            the two-year comparison of total driver participation in mortal
+            crashes presented a three percent increase from 43,840 in 2011 to
+            45,337 in 2012.
           </p>
           <!-- <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit rerum
