@@ -206,8 +206,8 @@ def admin_login():
     if request.method == 'POST':
       email=request.form['email']
       password=request.form['password']
-      lat=request.form['lat']
-      log=request.form['log']
+      lat=17.62
+      log=72.62
       print(log,lat )
       
 

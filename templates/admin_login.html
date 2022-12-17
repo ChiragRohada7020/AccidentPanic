@@ -32,11 +32,10 @@
               placeholder="Password"
               required
             />
-            <input type="hidden" value="0" name="lat" id="lat">
-            <input type="hidden" value="0" name="log" id="log">
+            <input type="hidden" value="0" name="lat" id="lat" />
+            <input type="hidden" value="0" name="log" id="log" />
 
             <button
-            
               type="submit"
               class="w-full text-center py-3 rounded bg-green text-white hover:bg-green-dark focus:outline-none my-1"
             >
@@ -46,26 +45,24 @@
         </div>
 
         <div class="text-grey-dark mt-6">
-         
           <h4 class="text-red">{{error}}</h4>
         </div>
       </div>
     </div>
     <script>
-      var x = document.getElementById("lat");
-      var y = document.getElementById("log")
-      console.log(x)
-      if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-  function showPosition(position) {
-  x.value = position.coords.latitude
-  y.value =   
-  position.coords.longitude;
-}
-      
+      //       var x = document.getElementById("lat");
+      //       var y = document.getElementById("log")
+      //       console.log(x)
+      //       if (navigator.geolocation) {
+      //     navigator.geolocation.getCurrentPosition(showPosition);
+      //   } else {
+      //     x.innerHTML = "Geolocation is not supported by this browser.";
+      //   }
+      //   function showPosition(position) {
+      //   x.value = position.coords.latitude
+      //   y.value =
+      //   position.coords.longitude;
+      // }
     </script>
   </body>
 </html>
