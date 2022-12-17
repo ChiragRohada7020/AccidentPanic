@@ -50,7 +50,7 @@ bcrypt = Bcrypt(app)
 
 
 if __name__ == '__main__':
-    app.run(host='192.168.0.1', port=5000)
+    app.run(host='0.0.0.0')
 
 
 
@@ -206,8 +206,8 @@ def admin_login():
     if request.method == 'POST':
       email=request.form['email']
       password=request.form['password']
-      lat=17.62
-      log=72.62
+      lat=request.form['lat']
+      log=request.form['log']
       print(log,lat )
       
 
